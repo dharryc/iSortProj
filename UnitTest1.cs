@@ -4,6 +4,7 @@ public static class Algorithms
 {
     // I messed around with this quite a bit, and I think it's tail call optimized, I'm writing this as I run a test with a 500,000 int long array.
     // IT WORKS!!! The 500,000 long array takes like 10 min, but it works for the assignment. I'm going to submit some code that's just showy for the assignment, maybe 50,000 long.
+    // I fixed it further, it's like twice as fast now!!!
     public static int[] insertionSort(int[] a)
     {
         //First, get a starting point for the algorithm to start making comparisons
