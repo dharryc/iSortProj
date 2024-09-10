@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iSortProj")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2dc78c241a1f2bf8fd8a115f241125d7d8a18eae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+751533fca6b5521137e3b6fcd6d8504fff097084")]
 [assembly: System.Reflection.AssemblyProductAttribute("iSortProj")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iSortProj")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
