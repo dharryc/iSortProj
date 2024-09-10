@@ -9,14 +9,14 @@ public static class Algorithms
     {
         //First, get a starting point for the algorithm to start making comparisons
         int index = 1;
+        //Create a placeholder so you can get back to the right place once you've "inserted" your element into the right place
+        int saveIndex = index;
         //Now make sure that the algorithm inspects each element in the array
         while (index < a.Length)
         {
             //Check if the current element is smaller than the element behind it
             if (a[index] < a[index - 1])
             {
-                //Create a placeholder so you can get back to the right place once you've "inserted" your element into the right place
-                int saveIndex = index;
                 //Swap values
                 (a[index], a[index - 1]) = (a[index - 1], a[index]);
                 //After you make the swap you have to check back through until you hit values that are the same as your current value
@@ -25,11 +25,9 @@ public static class Algorithms
                     index--;
                     (a[index], a[index - 1]) = (a[index - 1], a[index]);
                 }
-                //make sure you go back to your working index location
-                index = saveIndex;
             }
             //Go back through your loop at the next index
-            index++;
+            index = saveIndex++;
         }
         //Return the sorted index
         return a;
