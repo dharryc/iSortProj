@@ -6,30 +6,31 @@ public static class Algorithms
     // IT WORKS!!! The 500,000 long array takes like 10 min, but it works for the assignment. I'm going to submit some code that's just showy for the assignment, maybe 50,000 long.
     public static int[] insertionSort(int[] a)
     {
+        //First, get a starting point for the algorithm to start making comparisons
         int index = 1;
+        //Now make sure that the algorithm inspects each element in the array
         while (index < a.Length)
         {
+            //Check if the current element is smaller than the element behind it
             if (a[index] < a[index - 1])
             {
+                //Create a placeholder so you can get back to the right place once you've "inserted" your element into the right place
                 int saveIndex = index;
-                indexSwap(a, index);
-                while (index > 1)
+                //Swap values
+                (a[index], a[index - 1]) = (a[index - 1], a[index]);
+                //After you make the swap you have to check back through until you hit values that are the same as your current value
+                while (index > 1 && a[index - 1] < a[index - 2])
                 {
                     index--;
-                    if (a[index] < a[index - 1])
-                        indexSwap(a, index);
+                    (a[index], a[index - 1]) = (a[index - 1], a[index]);
                 }
+                //make sure you go back to your working index location
                 index = saveIndex;
             }
+            //Go back through your loop at the next index
             index++;
         }
-        return a;
-    }
-    public static int[] indexSwap(int[] a, int index)
-    {
-        int tempStore = a[index];
-        a[index] = a[index - 1];
-        a[index - 1] = tempStore;
+        //Return the sorted index
         return a;
     }
 }
